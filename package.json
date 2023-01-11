@@ -1,6 +1,6 @@
 {
     "name": "speedwalk",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Walk an entire directory. Fast, simple, and asynchronous.",
     "main": "./build/index.js",
     "exports": "./build/index.js",
@@ -9,7 +9,7 @@
     "scripts": {
         "lint": "npx eslint \"src/**\"",
         "play": "ts-node-esm -T src/__playground__/index.ts",
-        "build": "tsc"
+        "build": "tsc && ./lazy-minify"
     },
     "repository": {
         "type": "git",
