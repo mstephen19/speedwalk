@@ -3,6 +3,8 @@ node_modules
 build/__playground__
 .git
 src
+.vscode
+.idea
 
 # Files
 .eslintrc
