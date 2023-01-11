@@ -1,6 +1,6 @@
 {
     "name": "speedwalk",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Walk an entire directory. Fast, simple, and asynchronous.",
     "main": "./build/index.js",
     "exports": "./build/index.js",
