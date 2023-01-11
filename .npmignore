@@ -1,9 +1,12 @@
 # Folders
 node_modules
 build/__playground__
+.git
+src
 
 # Files
 .eslintrc
 yarn.lock
 tsconfig.json
 .DS_Store
+.gitignore

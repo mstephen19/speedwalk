@@ -10,9 +10,9 @@ import type { DirWalkCallback } from './types.js';
  * @param callback A callback function to run for each file found.
  * @returns
  */
-export async function walk(path: string, callback: DirWalkCallback): Promise<void> {
+export async function walk(root: string, callback: DirWalkCallback): Promise<void> {
     // Open the directory
-    const dir = await opendir(path);
+    const dir = await opendir(root);
 
     // An array of promises where recursive calls can
     // be stored and awaited later on.
@@ -21,7 +21,7 @@ export async function walk(path: string, callback: DirWalkCallback): Promise<voi
     // Asynchronously iterate through the directory
     for await (const file of dir) {
         // Grab the current path value for the file.
-        const current = join(path, file.name);
+        const current = join(root, file.name);
 
         promises.push(
             // Run the callback handling, but without awaiting

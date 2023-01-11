@@ -11,6 +11,10 @@
         "play": "ts-node-esm -T src/__playground__/index.ts",
         "build": "tsc"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mstephen19/dirwalk"
+    },
     "keywords": [
         "walk",
         "walkdir",
