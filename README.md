@@ -1,4 +1,4 @@
-# DirWalk
+# SpeedWalk
 
 [![TypeScript](https://badgen.net/badge/-/TypeScript/blue?icon=typescript&label)](https://www.typescriptlang.org/) [![Install size](https://packagephobia.com/badge?p=dirwalk@latest)](https://packagephobia.com/result?p=dirwalk@latest)
 
@@ -17,7 +17,7 @@ Walk an entire directory. Fast, simple, and asynchronous.
 Import the `walk` function from the package. To call it, pass in a root directory and a callback function accepting a `path` and a `dirent`.
 
 ```TypeScript
-import { walk } from 'dirwalk';
+import { walk } from 'speedwalk';
 
 await walk('./', (path, dirent) => {
     console.log('Path:', path);
@@ -30,7 +30,7 @@ The function will asynchronously traverse the directory and any subsequent direc
 You may want to ignore a directory. Tell `walk` to skip the traversal of a certain directory by returning `true` from the callback.
 
 ```TypeScript
-import { walk } from '../index.js';
+import { walk } from 'speedwalk';
 
 await walk('./', (path, dirent) => {
     console.log('Path:', path);

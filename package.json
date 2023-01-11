@@ -1,5 +1,5 @@
 {
-    "name": "dirwalk",
+    "name": "speedwalk",
     "version": "0.0.1",
     "description": "Walk an entire directory. Fast, simple, and asynchronous.",
     "main": "./build/index.js",
@@ -13,7 +13,11 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/mstephen19/dirwalk"
+        "url": "https://github.com/mstephen19/speedwalk"
+    },
+    "homepage": "https://github.com/mstephen19/speedwalk#readme",
+    "bugs": {
+        "url": "https://github.com/mstephen19/speedwalk/issues"
     },
     "keywords": [
         "walk",

@@ -5,4 +5,4 @@ type Awaitable<T> = T | Promise<T>;
 /**
  * A callback function to run for each file found.
  */
-export type DirWalkCallback = (path: string, dir: Dirent) => Awaitable<void | boolean>;
+export type WalkDirCallback = (path: string, dir: Dirent) => Awaitable<void | boolean>;

@@ -1,7 +1,7 @@
 import { opendir } from 'fs/promises';
 import { join } from 'path';
 
-import type { DirWalkCallback } from './types.js';
+import type { WalkDirCallback } from './types.js';
 
 /**
  * Traverse an entire directory's files and all subsequent subdirectories.
@@ -10,7 +10,7 @@ import type { DirWalkCallback } from './types.js';
  * @param callback A callback function to run for each file found.
  * @returns
  */
-export async function walk(root: string, callback: DirWalkCallback): Promise<void> {
+export async function walk(root: string, callback: WalkDirCallback): Promise<void> {
     // Open the directory
     const dir = await opendir(root);
 
