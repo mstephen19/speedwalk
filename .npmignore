@@ -1,0 +1,9 @@
+# Folders
+node_modules
+build/__playground__
+
+# Files
+.eslintrc
+yarn.lock
+tsconfig.json
+.DS_Store

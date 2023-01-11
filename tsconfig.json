@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "skipLibCheck": true,
+        "strict": true,
+        "declaration": true,
+        "declarationMap": false,
+        "sourceMap": false,
+        "module": "ESNext",
+        "moduleResolution": "NodeNext",
+        "target": "ESNext",
+        "removeComments": false,
+        "rootDir": "./src",
+        "outDir": "./build",
+        "pretty": false,
+        "allowSyntheticDefaultImports": true
+    },
+    "include": ["./src"]
+}

@@ -1,0 +1,35 @@
+{
+    "name": "dirwalk",
+    "version": "0.0.1",
+    "description": "Walk an entire directory. Fast, simple, and asynchronous.",
+    "main": "./build/index.js",
+    "exports": "./build/index.js",
+    "type": "module",
+    "license": "MIT",
+    "scripts": {
+        "lint": "npx eslint \"src/**\"",
+        "play": "ts-node-esm -T src/__playground__/index.ts",
+        "build": "tsc"
+    },
+    "keywords": [
+        "walk",
+        "walkdir",
+        "directory",
+        "dir",
+        "tree",
+        "files",
+        "walker",
+        "readdir",
+        "opendir",
+        "crawl",
+        "crawler"
+    ],
+    "devDependencies": {
+        "@types/node": "^18.11.18",
+        "@typescript-eslint/eslint-plugin": "^5.48.1",
+        "@typescript-eslint/parser": "^5.48.1",
+        "eslint": "^8.31.0",
+        "ts-node": "^10.9.1",
+        "typescript": "^4.9.4"
+    }
+}
