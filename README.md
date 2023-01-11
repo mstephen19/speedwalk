@@ -1,6 +1,6 @@
 # SpeedWalk
 
-[![TypeScript](https://badgen.net/badge/-/TypeScript/blue?icon=typescript&label)](https://www.typescriptlang.org/) [![Install size](https://packagephobia.com/badge?p=dirwalk@latest)](https://packagephobia.com/result?p=dirwalk@latest)
+[![TypeScript](https://badgen.net/badge/-/TypeScript/blue?icon=typescript&label)](https://www.typescriptlang.org/) [![Install size](https://packagephobia.com/badge?p=speedwalk@latest)](https://packagephobia.com/result?p=speedwalk@latest)
 
 Walk an entire directory. Fast, simple, and asynchronous.
 
