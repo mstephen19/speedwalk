@@ -25,7 +25,8 @@ export async function walk(root: string, callback: WalkDirCallback): Promise<voi
 
         promises.push(
             // Run the callback handling, but without awaiting
-            // it so there is no blocking.
+            // it within the loop so there is no blocking for
+            // the next file.
             (async () => {
                 const ignore = await callback(current, file);
                 if (ignore || !file.isDirectory()) return;
