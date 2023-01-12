@@ -12,6 +12,18 @@ Walk an entire directory. Fast, simple, and asynchronous.
 - Dead simple. Modeled after Golang's [`filepath.Walk`](https://pkg.go.dev/path/filepath#Walk).
 - Modern [ESModules](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)-only support.
 
+## Comparisons
+
+Here are some comparisons between **speedwalk** and other Node.js libraries that provide tree-walking solutions.
+
+> All tests were conducted on the same large directory. Each result is the average of each library's time to complete the walk with no custom functions provided.
+
+| Package | Result |
+|-|-|
+| `speedwalk` | 6.95ms |
+| `walk` | 13826.33ms |
+| `@root/walk` | 276.96ms |
+
 ## Usage
 
 Import the `walk` function from the package. To call it, pass in a root directory and a callback function accepting a `path` and a `dirent`.
