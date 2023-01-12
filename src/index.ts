@@ -5,10 +5,8 @@ import type { WalkDirCallback } from './types.js';
 
 /**
  * Traverse an entire directory's files and all subsequent subdirectories.
- *
  * @param path The directory to start walking in.
  * @param callback A callback function to run for each file found.
- * @returns
  */
 export async function walk(root: string, callback: WalkDirCallback): Promise<void> {
     // Open the directory

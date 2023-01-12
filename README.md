@@ -35,22 +35,13 @@ import { walk } from 'speedwalk';
 await walk('./', (path, dirent) => {
     console.log('Path:', path);
     console.log('Is a file:', dirent.isFile());
-});
-```
-
-The function will asynchronously walk through the root directory and all subsequent directories until the entire tree has been traversed.
-
-You may want to ignore a directory. Tell `walk` to skip the traversal of a certain directory by returning `true` from the callback.
-
-```TypeScript
-import { walk } from 'speedwalk';
-
-await walk('./', (path, dirent) => {
-    console.log('Path:', path);
-    console.log('Is a file:', dirent.isFile());
 
     if (dirent.isDirectory() && dirent.name === 'node_modules') {
+        // Tell "walk" to skip the traversal of a certain
+        // directory by returning "true" from the callback.
         return true;
     }
 });
 ```
+
+The function will asynchronously walk through the root directory and all subsequent directories until the entire tree has been traversed.
