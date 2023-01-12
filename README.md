@@ -23,6 +23,7 @@ Here are some comparisons between **speedwalk** and other Node.js libraries that
 | `speedwalk` | 6.95ms |
 | `walk` | 13826.33ms |
 | `@root/walk` | 276.96ms |
+| `walker` | 296.05ms |
 
 ## Usage
 
