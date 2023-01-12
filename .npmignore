@@ -15,4 +15,4 @@ tsconfig.json
 go.mod
 go.sum
 main.go
-lazy-minify
+minify

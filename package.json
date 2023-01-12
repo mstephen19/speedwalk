@@ -9,7 +9,7 @@
     "scripts": {
         "lint": "npx eslint \"src/**\"",
         "play": "ts-node-esm -T src/__playground__/index.ts",
-        "build": "tsc && ./lazy-minify"
+        "build": "tsc && ./minify"
     },
     "repository": {
         "type": "git",

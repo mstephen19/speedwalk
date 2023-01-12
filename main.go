@@ -8,14 +8,31 @@ import (
 	"path/filepath"
 	"regexp"
 	"sync"
+
+	"github.com/dlclark/regexp2"
 )
 
 const BuildPath = "./build"
 const DotJS = ".js"
 
+const (
+	Comments          string = `\/{2}.*`
+	MultilineComments        = `\/\*{2}(.|\n)*\*\/`
+	RemovableSpaces          = `(?<![a-zA-Z])\s|\s(?![a-zA-Z])`
+)
+
 func FileExists(path string) bool {
 	_, err := os.Stat(path)
 	return !(err != nil)
+}
+
+func Minify(data []byte) []byte {
+	// Remove all comments
+	a := regexp.MustCompile(fmt.Sprintf("%s|%s", Comments, MultilineComments)).ReplaceAll(data, []byte(""))
+	// Remove removable spaces
+	b, _ := regexp2.MustCompile(RemovableSpaces, regexp2.None).Replace(string(a), "", -1, -1)
+
+	return []byte(b)
 }
 
 func main() {
@@ -24,7 +41,6 @@ func main() {
 	}
 
 	wg := sync.WaitGroup{}
-
 	err := filepath.Walk(BuildPath, func(path string, info fs.FileInfo, err error) error {
 		wg.Add(1)
 
@@ -44,9 +60,8 @@ func main() {
 				return
 			}
 
-			// Remove comments from just JS files since the TypeScript compiler removes comments
-			// from .d.ts files as well when provided the "removeComments" option
-			minified := regexp.MustCompile(`\/{2}.*\n|\/\*{2}((.|\n)*)\*\/|\s{2,}|\n`).ReplaceAll(data, []byte(""))
+			minified := Minify(data)
+
 			file, _ := os.OpenFile(path, os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0644)
 			defer file.Close()
 			file.Write(minified)
@@ -58,6 +73,5 @@ func main() {
 	if err != nil {
 		panic("Error ")
 	}
-
 	wg.Wait()
 }
