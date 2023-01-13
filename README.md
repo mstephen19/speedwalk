@@ -7,7 +7,7 @@ Walk an entire directory. Fast, simple, and asynchronous.
 ## Features
 
 - Zero dependencies. Small bundle size.
-- Written in Typescript.
+- Written in TypeScript.
 - Fast and asynchronous. Suitable for large directories. Fastest tree-traversal solution on NPM.
 - Dead simple. Modeled after Golang's [`filepath.Walk`](https://pkg.go.dev/path/filepath#Walk).
 - Modern [ESModules](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) support.
