@@ -37,3 +37,5 @@ export async function walk(root: string, callback: WalkDirCallback): Promise<voi
 
     return void Promise.all(promises);
 }
+
+export type { WalkDirCallback } from './types.js';
